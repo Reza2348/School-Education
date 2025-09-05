@@ -1,0 +1,151 @@
+body {
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Vazirmatn", sans-serif;
+}
+
+
+.navbar {
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff5f0;
+    border-bottom: 1px solid #e5e7eb;
+    z-index: 50;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+    height: 70px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo {
+    border: 2px solid sandybrown;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logoImg {
+    height: 32px;
+}
+
+.logoText {
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+}
+
+.highlight {
+    color: black;
+}
+
+
+.navLinks {
+    border-radius: 5px;
+    display: none;
+    gap: 30px;
+}
+
+.navLink {
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navLink::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #ef4444;
+    transition: width 0.3s ease;
+}
+
+.navLink:hover {
+    color: #ef4444;
+}
+
+
+.active::after {
+    width: 100%;
+}
+
+
+.loginContainer {
+    display: none;
+}
+
+
+
+
+.menuToggle {
+    background: none;
+    border: none;
+    color: #374151;
+    cursor: pointer;
+    display: block;
+}
+
+
+.mobileMenu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff5f0;
+    border-top: 1px solid #e5e7eb;
+    padding: 16px;
+    gap: 16px;
+}
+
+.mobileLink {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+
+
+
+.mobileLoginBtn:hover {
+    background-color: #fff5f5;
+}
+
+
+@media (min-width: 768px) {
+    .navLinks {
+        display: flex;
+    }
+
+    .loginContainer {
+        display: block;
+    }
+
+    .menuToggle {
+        display: none;
+    }
+
+    .mobileMenu {
+        display: none;
+    }
+}
